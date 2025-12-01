@@ -1,0 +1,19 @@
+cradle:
+    multi:
+        - path: "./src"
+          config:
+              cradle:
+                  stack:
+                      component: "advent-of-code-y2025:lib"
+
+        - path: "./test"
+          config:
+              cradle:
+                  stack:
+                      component: "advent-of-code-y2025:test:advent-of-code-y2025-test"
+
+        - path: "."
+          config:
+              cradle:
+                  stack:
+                      component: "advent-of-code-y2025:lib"

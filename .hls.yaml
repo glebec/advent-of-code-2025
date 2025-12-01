@@ -1,0 +1,7 @@
+# Disable cabal-gild since it's not installed
+# Since we use hpack (package.yaml), we don't need .cabal formatting anyway
+plugins:
+    cabal-gild:
+        globalOn: false
+    # Alternative: use cabal-fmt instead (requires: stack install cabal-fmt)
+    # cabalFormattingProvider: cabal-fmt

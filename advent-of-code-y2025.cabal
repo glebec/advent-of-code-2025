@@ -1,0 +1,116 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           advent-of-code-y2025
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/glebec/advent-of-code-y2025#readme>
+homepage:       https://github.com/glebec/advent-of-code-y2025#readme
+bug-reports:    https://github.com/glebec/advent-of-code-y2025/issues
+author:         Gabriel Lebec
+maintainer:     glebec@gmail.com
+copyright:      2025 Gabriel Lebec
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/glebec/advent-of-code-y2025
+
+library
+  exposed-modules:
+      AoC.Day00.Input
+      AoC.Day00.Solution
+      AoC.Solver
+  other-modules:
+      Paths_advent_of_code_y2025
+  hs-source-dirs:
+      src
+  default-extensions:
+      BangPatterns
+      ConstraintKinds
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveLift
+      DeriveTraversable
+      DerivingStrategies
+      DerivingVia
+      EmptyCase
+      FlexibleContexts
+      FlexibleInstances
+      GeneralizedNewtypeDeriving
+      ImportQualifiedPost
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      OverloadedStrings
+      NamedFieldPuns
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneDeriving
+      TupleSections
+      TypeApplications
+      TypeOperators
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , data-interval
+    , megaparsec
+    , raw-strings-qq
+    , split
+  default-language: Haskell2010
+
+test-suite advent-of-code-y2025-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      AoC.Day01.SolutionSpec
+      Paths_advent_of_code_y2025
+  hs-source-dirs:
+      test
+  default-extensions:
+      BangPatterns
+      ConstraintKinds
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveLift
+      DeriveTraversable
+      DerivingStrategies
+      DerivingVia
+      EmptyCase
+      FlexibleContexts
+      FlexibleInstances
+      GeneralizedNewtypeDeriving
+      ImportQualifiedPost
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      OverloadedStrings
+      NamedFieldPuns
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneDeriving
+      TupleSections
+      TypeApplications
+      TypeOperators
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      advent-of-code-y2025
+    , base >=4.7 && <5
+    , containers
+    , data-interval
+    , hspec
+    , megaparsec
+    , raw-strings-qq
+    , split
+  default-language: Haskell2010
