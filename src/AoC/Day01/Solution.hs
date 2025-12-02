@@ -38,8 +38,9 @@ day01a =
 applyInputCountingLoops :: (Int, Int) -> DialInput -> (Int, Int)
 applyInputCountingLoops (start, zeros) (L clicks) =
     let (negLoops, next) = (start - clicks) `divMod` 100
-        z' = if start == 0 then abs negLoops - 1 else abs negLoops -- start at 0 means first loop didn't have a zero click
-     in (next, zeros + z' + if next == 0 then 1 else 0)
+        passes = abs negLoops - if start == 0 then 1 else 0
+        landed = if next == 0 then 1 else 0
+     in (next, zeros + passes + landed)
 applyInputCountingLoops (start, zeros) (R clicks) =
     let (loops, next) = (start + clicks) `divMod` 100
      in (next, zeros + loops)
