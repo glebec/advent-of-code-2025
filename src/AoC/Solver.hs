@@ -8,8 +8,10 @@ data a :->: b = MkSol
     , sPrint :: b -> String
     }
 
-runSolution :: (a :->: b) -> String -> Maybe String
+data SolverError = ParseError | SolveError deriving (Show)
+
+runSolution :: (a :->: b) -> String -> Either SolverError String
 runSolution (MkSol sParse sSolve sPrint) raw = do
-    input <- sParse raw
-    solution <- sSolve input
+    input <- maybe (Left ParseError) Right (sParse raw)
+    solution <- maybe (Left SolveError) Right (sSolve input)
     pure $ sPrint solution
